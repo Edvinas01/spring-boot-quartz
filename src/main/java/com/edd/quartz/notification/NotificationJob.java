@@ -1,4 +1,4 @@
-package com.edv.quartz.jobs;
+package com.edd.quartz.notification;
 
 import org.quartz.Job;
 import org.quartz.JobExecutionContext;

@@ -1,4 +1,4 @@
-package com.edv.quartz.configuration;
+package com.edd.quartz.configuration;
 
 import org.flywaydb.core.Flyway;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -7,6 +7,11 @@ import org.springframework.context.annotation.Configuration;
 
 import javax.sql.DataSource;
 
+/**
+ * Use flyway migrations to create the required database entries.
+ *
+ * @see <a href="https://dzone.com/articles/configuring-quartz">configuring-quartz</a>
+ */
 @Configuration
 public class FlywayConfiguration {
 

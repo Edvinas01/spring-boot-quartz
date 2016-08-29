@@ -1,12 +1,12 @@
-package com.edv.quartz;
+package com.edd.quartz;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class QuartzTestApplication {
+public class SpringBootQuartz {
 
 	public static void main(String[] args) {
-		SpringApplication.run(QuartzTestApplication.class, args);
+		SpringApplication.run(SpringBootQuartz.class, args);
 	}
 }

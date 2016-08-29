@@ -1,1 +1,6 @@
-triggers.quick.millis: 1000
+triggers:
+  # Both triggers should run every 5 seconds.
+  millis: 5000
+  cron: "0/5 * * * * ?"
+
+quartz.properties.file: classpath:quartz.properties

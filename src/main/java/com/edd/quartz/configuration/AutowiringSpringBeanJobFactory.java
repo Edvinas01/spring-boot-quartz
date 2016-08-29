@@ -1,4 +1,4 @@
-package com.edv.quartz.configuration;
+package com.edd.quartz.configuration;
 
 import org.quartz.spi.TriggerFiredBundle;
 import org.springframework.beans.factory.config.AutowireCapableBeanFactory;
@@ -6,6 +6,11 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.context.ApplicationContextAware;
 import org.springframework.scheduling.quartz.SpringBeanJobFactory;
 
+/**
+ * Configure autowiring for spring beans in quartz jobs.
+ *
+ * @see <a href="https://github.com/davidkiss/spring-boot-quartz-demo">spring-boot-quartz-demo</a>
+ */
 public final class AutowiringSpringBeanJobFactory extends SpringBeanJobFactory implements
         ApplicationContextAware {
 
