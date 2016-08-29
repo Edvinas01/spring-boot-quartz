@@ -25,14 +25,14 @@ public class QuartzConfiguration {
                                                  DataSource dataSource,
                                                  @Value("${quartz.properties.file}") Resource quartzProperties) {
 
-        SchedulerFactoryBean schedulerFactoryBean = new SchedulerFactoryBean();
-        schedulerFactoryBean.setApplicationContextSchedulerContextKey("applicationContext");
-        schedulerFactoryBean.setJobFactory(jobFactory(applicationContext));
-        schedulerFactoryBean.setTransactionManager(transactionManager);
-        schedulerFactoryBean.setWaitForJobsToCompleteOnShutdown(true);
-        schedulerFactoryBean.setConfigLocation(quartzProperties);
-        schedulerFactoryBean.setDataSource(dataSource);
-        return schedulerFactoryBean;
+        SchedulerFactoryBean factory = new SchedulerFactoryBean();
+        factory.setApplicationContextSchedulerContextKey("applicationContext");
+        factory.setJobFactory(jobFactory(applicationContext));
+        factory.setTransactionManager(transactionManager);
+        factory.setWaitForJobsToCompleteOnShutdown(true);
+        factory.setConfigLocation(quartzProperties);
+        factory.setDataSource(dataSource);
+        return factory;
     }
 
     @Bean
